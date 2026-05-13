@@ -74,4 +74,5 @@ private:
     // Score panel
     void updateScorePanel();
     void refreshHistoryTable();
+    void resizeEvent(QResizeEvent* event) override;
 };

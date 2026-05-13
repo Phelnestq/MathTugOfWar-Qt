@@ -380,3 +380,49 @@ void MainWindow::refreshHistoryTable() {
     if (!matchHistory_.isEmpty())
         table->scrollToBottom();
 }
+
+void MainWindow::resizeEvent(QResizeEvent* event) {
+    QMainWindow::resizeEvent(event);
+
+    int w = width();
+    int h = height();
+
+    // Margins and spacing
+    int margin      = 10;
+    int panelWidth  = 220;
+    int gameWidth   = w - panelWidth - margin * 3;
+
+    // Title
+    ui->labelTitle->setGeometry(margin, margin, gameWidth, 40);
+
+    // Tug of war widget — takes up most of the game area
+    int towHeight = h * 0.45;
+    ui->tugOfWarWidget->setGeometry(margin, 55, gameWidth, towHeight);
+
+    // Question label
+    int qY = 55 + towHeight + 10;
+    ui->labelQuestion->setGeometry(margin, qY, gameWidth, 45);
+
+    // Answer input — centred within game area
+    int inputW = 300;
+    int inputX = margin + (gameWidth - inputW) / 2;
+    ui->inputAnswer->setGeometry(inputX, qY + 55, inputW, 40);
+
+    // Timer — centred
+    int timerW = 150;
+    int timerX = margin + (gameWidth - timerW) / 2;
+    ui->labelTimer->setGeometry(timerX, qY + 105, timerW, 35);
+
+    // Score panel — fixed width on the right
+    int panelX = w - panelWidth - margin;
+    ui->panelScore->setGeometry(panelX, margin, panelWidth, h - margin * 2);
+
+    // Labels inside score panel
+    ui->labelPanelTitle->setGeometry(panelX + 5, margin + 10, panelWidth - 10, 25);
+    ui->labelSessionRound->setGeometry(panelX + 5, margin + 40, panelWidth - 10, 22);
+    ui->labelSessionPlayer->setGeometry(panelX + 5, margin + 65, panelWidth - 10, 22);
+    ui->labelSessionComputer->setGeometry(panelX + 5, margin + 90, panelWidth - 10, 22);
+    ui->labelHistoryTitle->setGeometry(panelX + 5, margin + 120, panelWidth - 10, 22);
+    ui->tableHistory->setGeometry(panelX + 5, margin + 145,
+                                  panelWidth - 10, h - margin * 2 - 155);
+}

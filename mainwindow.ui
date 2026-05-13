@@ -17,7 +17,7 @@
    <string notr="true">background-color: #1a1a2e;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelTitle">
     <property name="geometry">
      <rect>
       <x>200</x>

@@ -9,6 +9,7 @@ TugOfWarWidget::TugOfWarWidget(QWidget* parent)
       player2Name_("Player 2")
 {
     setAttribute(Qt::WA_OpaquePaintEvent, false);
+    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 }
 
 void TugOfWarWidget::setPosition(int position) {
