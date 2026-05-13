@@ -9,7 +9,8 @@ A fully graphical math competition game built in **C++ with Qt6**, where players
 ## Screenshots
 
 > *Game running at Primary Easy difficulty — Player vs Computer*
-><img width="1915" height="1022" alt="image" src="https://github.com/user-attachments/assets/41401ef5-be86-47bf-9c55-dc6dc1db59d4" />
+><img width="1312" height="805" alt="image" src="https://github.com/user-attachments/assets/c1488a66-5adf-410f-acf3-fa4b17f5146e" />
+
 
 
 ---
