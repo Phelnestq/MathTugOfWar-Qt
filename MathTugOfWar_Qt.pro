@@ -14,6 +14,7 @@ SOURCES += \
     ScoreTracker.cpp \
     main.cpp \
     mainwindow.cpp \
+    soloprogresswidget.cpp \
     tugofwarwidget.cpp
 
 HEADERS += \
@@ -24,6 +25,7 @@ HEADERS += \
     QuestionGenerator.h \
     ScoreTracker.h \
     mainwindow.h \
+    soloprogresswidget.h \
     tugofwarwidget.h
 
 FORMS += \
